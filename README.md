@@ -2,7 +2,7 @@
 
 Experimenting with easier ways to display images in custom blocks within PDF R Markdown outputs.
 
-![customBlocks.png]
+![customBlocks.png](customBlocks.png)
 
 ## Image Credits:
 
