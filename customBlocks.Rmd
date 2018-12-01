@@ -1,9 +1,23 @@
 ---
+title: Custom R Markdown Blocks
 output:
+  bookdown::html_document2:
+    css: style.css
   bookdown::pdf_book:
     includes:
       in_header: preamble.tex
 ---
+
+Some Basic examples on how to make custom blocks in R Markdown for PDF output. 
+
+# Without Images
+
+```{block2, type = "customBlock"}
+Some text
+```
+
+
+# With Images
 
 ```{block2, type = "rmdnote"}
 Some text

@@ -2,16 +2,24 @@
 \usepackage{graphicx}
 \usetikzlibrary{calc}
 
-% Create our custom box
-\newtcolorbox{mybox}[2][]{
+\definecolor{customGrey}{HTML}{F2F4F4}
+\definecolor{customRed}{HTML}{B03A2E}
+
+% Create our custom box without images
+\newtcolorbox{customBlock}{
+  colback = customGrey,
+  colframe = customRed,
+  boxsep=5pt,
+  arc=4pt}
+
+
+% Create our custom box: template for images
+\newtcolorbox{customBlockImage}[2][]{
   enhanced,
-  left=0pt,
-  right=0pt,
   top=10pt,
   bottom=10pt,
   colframe = white,
   width=\textwidth,
-  enlarge left by=0mm,
   boxsep=5pt,
   arc=4pt,
   outer arc=4pt,
@@ -24,27 +32,32 @@ overlay={
 
 
 % Define HTML colours for use
-\definecolor{EFEFFF}{HTML}{EFEFFF}
-\definecolor{FFFFAD}{HTML}{FFFFAD}
-\definecolor{DEFFDE}{HTML}{DEFFDE}
-\definecolor{FFDFDE}{HTML}{FFDFDE}
+\definecolor{customPurple}{HTML}{6C3483}
+\definecolor{customGreen}{HTML}{117A65}
+\definecolor{customOrange}{HTML}{B9770E}
+\definecolor{customBlue}{HTML}{2E86C1}
 
 
 % Create the new environments for R Markdown
 \newenvironment{rmdnote}
-  {\begin{mybox}[colback=EFEFFF]{images/note}}
-  {\end{mybox}}
+  {\begin{customBlockImage}[colframe=customGreen]{images/note}}
+  {\end{customBlockImage}}
   
 \newenvironment{rmdimportant}
-  {\begin{mybox}[colback=FFFFAD]{images/important}}
-  {\end{mybox}}
+  {\begin{customBlockImage}[colframe=customPurple]{images/important}}
+  {\end{customBlockImage}}
   
 \newenvironment{rmdtip}
-  {\begin{mybox}[colback=DEFFDE]{images/tip}}
-  {\end{mybox}}
+  {\begin{customBlockImage}[colframe=customOrange]{images/tip}}
+  {\end{customBlockImage}}
   
 \newenvironment{rmdwarning}
-  {\begin{mybox}[colback=FFDFDE]{images/warning.png}}
-  {\end{mybox}}
+  {\begin{customBlockImage}[colframe=customRed]{images/warning.png}}
+  {\end{customBlockImage}}
+  
+\newenvironment{rmdcustom}
+  {\begin{customBlockImage}[colframe=customBlue]{images/warning.png}}
+  {\end{customBlockImage}}
+
   
   
