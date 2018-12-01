@@ -1,0 +1,23 @@
+---
+output:
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+---
+
+
+```{block2, type = "rmdnote"}
+Some text
+```
+
+```{block2, type = "rmdimportant"}
+Some text
+```
+
+```{block2, type = "rmdtip"}
+Some text
+```
+
+```{block2, type = "rmdwarning"}
+Some text
+```
