@@ -37,7 +37,6 @@ overlay={
 \definecolor{customOrange}{HTML}{B9770E}
 \definecolor{customBlue}{HTML}{2E86C1}
 
-
 % Create the new environments for R Markdown
 \newenvironment{rmdnote}
   {\begin{customBlockImage}[colframe=customGreen]{images/note}}
@@ -59,7 +58,16 @@ overlay={
   {\begin{customBlockImage}[colframe=customBlue]{images/warning.png}}
   {\end{customBlockImage}}
 
+% Examples including titles
 \newenvironment{rmdhelp}
-  {\begin{customBlockImage}[colframe=black]{images/help.png}}
+  {\begin{customBlockImage}[colframe=black, title=Did you know?]{images/help.png}}
+  {\end{customBlockImage}}
+  
+\newenvironment{rmdtip2}
+  {\begin{customBlockImage}[colframe=customOrange, title=Tip]{images/tip}}
+  {\end{customBlockImage}}
+  
+\newenvironment{rmdwarning2}
+  {\begin{customBlockImage}[colframe=customRed, title=Warning]{images/warning.png}}
   {\end{customBlockImage}}
   
