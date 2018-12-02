@@ -9,8 +9,7 @@
   border-width: thin;
 }
 
-
-.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
+.rmdhelp , .rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
   background: #f5f5f5 5px center/3em no-repeat;
@@ -18,19 +17,24 @@
   border-radius: 10px;
   border-width: thin;
 }
+
 .rmdimportant {
   background-image: url("images/important.png");
-  border-color: #6C3483;
+  border-color: #F9BD3C;
 }
 .rmdnote {
   background-image: url("images/note.png");
-  border-color: #117A65;
+  border-color: #EED992;
 }
 .rmdtip {
   background-image: url("images/tip.png");
-  border-color: #B9770E;
+  border-color: #D7C999;
 }
 .rmdwarning {
   background-image: url("images/warning.png");
   border-color: #B03A2E;
+}
+.rmdhelp {
+  background-image: url("images/help.png");
+  border-color: black;
 }
